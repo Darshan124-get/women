@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EmpowHer - SOS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Home Screen -->
+    <div id="home-screen" class="screen">
+        <header>
+            <h2>you  </h2>
+            <p>Maharashtra 416001</p>
+        </header>
+        <p class="emergency-text">Are you in Emergency? <br>Press the button below, help will reach you soon.</p>
+        <button class="sos-button"onclick="showCountdown()">SOS</button>
+        <div class="menu"> 
+            <!-- onclick="showCountdown()">SOS</button>
+        <div class="menu"> -->
+            <!-- <button>Add Friends</button> -->
+            <!-- <button>Safe Route</button> -->
+            <!-- <button>Track Me</button> -->
+        </div>
+    </div>
+
+    <!-- SOS Countdown Screen -->
+    <div id="countdown-screen" class="screen hidden">
+        <h2>EmpowHer</h2>
+        <p>Notifying your contacts</p>
+        <div class="countdown-circle">
+            <span id="countdown-timer">5</span>
+        </div>
+        <p class="countdown-text">During SOS event, the phone captures your real-time images and records surrounding noises.</p>
+        <div class="countdown-buttons">
+            <button onclick="cancelSOS()">Cancel SOS</button>
+            <button onclick="triggerSOS()">Skip Countdown</button>
+        </div>
+    </div>
+
+    <!-- SOS Triggered Screen -->
+    <div id="sos-triggered-screen" class="screen hidden">
+        <h2>EmpowHer</h2>
+        <p>Your contacts are being notified <br> "Safety is on the way"</p>
+        <button class="sos-button">SOS</button>
+        <div class="pin-container">
+            <p>To stop SOS enter safety PIN</p>
+            <div class="pin-inputs">
+                <input type="password" maxlength="1" class="pin" required>
+                <input type="password" maxlength="1" class="pin" required>
+                <input type="password" maxlength="1" class="pin" required>
+                <input type="password" maxlength="1" class="pin" required>
+            </div>
+            <button class="submit-btn" onclick="verifyPin()">Submit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
